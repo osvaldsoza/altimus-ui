@@ -23,7 +23,7 @@ class veiculos extends Component {
         this.handleGetVeiculos();
     }
     handleGetVeiculos = () => {
-        axios.get(`http://localhost:8080/veiculos`)
+        axios.get(`https://altimus-api.herokuapp.com/veiculos`)
             .then((res) => {
                 this.setState({ veiculos: res.data })
             })
@@ -31,7 +31,7 @@ class veiculos extends Component {
 
     handleGetVeiculosByPlaca = () => {
         let placa = this.state.placaVeiculo
-        axios.get(`http://localhost:8080/veiculos/${placa}`)
+        axios.get(`https://altimus-api.herokuapp.com/veiculos/${placa}`)
             .then((res) => {
                 this.setState({ veiculos: res.data })
             })
@@ -39,7 +39,7 @@ class veiculos extends Component {
 
 
     handleClickMergeVeiculo = () => {
-        axios.post('http://localhost:8080/veiculos', this.state.veiculo)
+        axios.post('https://altimus-api.herokuapp.com/veiculos', this.state.veiculo)
             .then((res) => {
                 this.handleGetVeiculos();
             })
@@ -49,7 +49,7 @@ class veiculos extends Component {
     handleClickExcluirVeiculo = () => {
         let codigo = this.state.selectedVeiculo.codigo
 
-        axios.delete(`http://localhost:8080/veiculos/${codigo}`)
+        axios.delete(`https://altimus-api.herokuapp.com/veiculos/${codigo}`)
             .then((res) => {
                 this.handleGetVeiculos();
             }).catch(error => console.log(error))
