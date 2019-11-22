@@ -2,4 +2,7 @@
 Passos para executar altimus-ui:
 1 - https://github.com/osvaldsoza/altimus-teste.git;
 2 - cd altimus-ui para entrar na pasta
-3 - excutar npm instal / npm i / yarn add;
+3 - excutar npm instal / npm i para baixar os pacotes que estão package.json
+4 - yarn start
+
+A apliacao está consumindo um api simples que está no heroku(https://altimus-api.herokuapp.com/veiculos)
