@@ -1,6 +1,7 @@
-import React from 'react'
-import './App.css'
-import Veiculo from './components/Veiculo'
+import React from 'react';
+import './App.css';
+import Veiculo from './components/Veiculo';
+
 function App() {
   return (
     <div className="App">

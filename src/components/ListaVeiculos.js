@@ -12,7 +12,7 @@ function ListaVeiculos({ veiculos, selectedVeiculo, handleOnSelectionChange, han
             paginator={true}
             rows={6}
             responsive={true}
-            header={veiculos.length > 0 ? "veiculos" : "Não há veículos cadastrados"}
+            header={veiculos.length > 0 ? "Veiculos" : "Não há veículos cadastrados"}
             footer={btnNovoVeiculo}
             selectionMode="single"
             selection={selectedVeiculo}
