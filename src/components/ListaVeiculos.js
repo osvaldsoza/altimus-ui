@@ -1,11 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DataTable } from 'primereact/datatable'
-import { Column } from 'primereact/column'
+import {DataTable} from 'primereact/datatable'
+import {Column} from 'primereact/column'
 
 
+function ListaVeiculos(
+    {
+        veiculos,
+        selectedVeiculo,
+        handleOnSelectionChange,
+        handleVeiculoSelected,
+        btnNovoVeiculo
+    }) {
 
-function ListaVeiculos({ veiculos, selectedVeiculo, handleOnSelectionChange, handleVeiculoSelected, btnNovoVeiculo }) {
     return (
         <DataTable
             value={veiculos}
@@ -18,11 +25,11 @@ function ListaVeiculos({ veiculos, selectedVeiculo, handleOnSelectionChange, han
             selection={selectedVeiculo}
             onSelectionChange={handleOnSelectionChange}
             onRowSelect={handleVeiculoSelected}>
-            <Column field="placa" header="Placa" />
-            <Column field="marca" header="Marca" />
-            <Column field="modelo" header="Modelo" />
-            <Column field="anoModelo" header="Ano do Modelo" sortable={true} />
-            <Column field="quilometragem" header="Quilometragem" />
+            <Column field="placa" header="Placa"/>
+            <Column field="marca" header="Marca"/>
+            <Column field="modelo" header="Modelo"/>
+            <Column field="anoModelo" header="Ano do Modelo"/>
+            <Column field="quilometragem" header="Quilometragem"/>
         </DataTable>
     );
 }
